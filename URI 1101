@@ -1,0 +1,21 @@
+#include <stdio.h>
+  
+int main() {
+     
+     int M, N, c, d, e;
+    while (
+        scanf("%d %d", &M, &N) && M > 0 && N > 0){
+            e = 0;
+            /*Quando algum dos valores (M ou N) for menor ou igual a zero*/
+            if (N < M){
+                c = M; M = N; N = c;
+            }
+            for (d = M; d <= N; d++){ 
+                printf("%d ", d);
+                e += d;
+            }
+            printf("Sum=%d\n", e);
+        }
+  
+    return 0;
+}
